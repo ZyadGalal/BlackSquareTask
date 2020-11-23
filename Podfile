@@ -6,5 +6,8 @@ target 'BlackSquareTask' do
   use_frameworks!
 
   # Pods for BlackSquareTask
+pod 'Alamofire'
+pod 'SVProgressHUD'
+pod 'Kingfisher'
 
 end
