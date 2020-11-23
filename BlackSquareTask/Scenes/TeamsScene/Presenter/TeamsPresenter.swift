@@ -9,6 +9,10 @@ import Foundation
 
 protocol TeamsView: class{
     var presenter: TeamsPresenter? {get set}
+    func showIndicator()
+    func dismissIndicator()
+    func didFetchDataSuccessfully()
+    func didFailFetchData(with message: String)
 }
 
 class TeamsPresenter{

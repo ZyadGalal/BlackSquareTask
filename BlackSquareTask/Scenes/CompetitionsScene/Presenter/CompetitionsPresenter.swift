@@ -9,6 +9,10 @@ import Foundation
 
 protocol CompetitionsView: class{
     var presenter: CompetitionsPresenter? {get set}
+    func showIndicator()
+    func dismissIndicator()
+    func didFetchDataSuccessfully()
+    func didFailFetchData(with message: String)
 }
 
 class CompetitionsPresenter{
@@ -17,6 +21,7 @@ class CompetitionsPresenter{
     var router: CompetitionsRouter
     var interactor: CompetitionsInteractor
     var modelItems : [CellConfigurator] = []
+    var competitions: [Competition] = []
     typealias competitionCellConfig = TableCellConfigurator<CompetitionsTableViewCell, Competition>
 
     init (view: CompetitionsView, router: CompetitionsRouter, interactor: CompetitionsInteractor){
@@ -49,7 +54,7 @@ class CompetitionsPresenter{
         return modelItems.count
     }
     func didSelectCompetition(at index: Int){
-        //change index with competition id
-        router.navigateToTeamViewController(from: view!, with: index)
+        guard let competitionID = competitions[index].id else {return}
+        router.navigateToTeamViewController(from: view!, with: competitionID)
     }
 }

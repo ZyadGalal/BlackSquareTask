@@ -30,6 +30,7 @@
 		3245DF6C256C2E9B003B8D8A /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */; };
 		3245DF6D256C2E9B003B8D8A /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */; };
 		3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */; };
+		32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */; };
 		32F68BAA256C348E00BCD952 /* TeamInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */; };
 		32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */; };
 		32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */; };
@@ -63,6 +64,7 @@
 		3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoPresenter.swift; sourceTree = "<group>"; };
 		32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoRouter.swift; sourceTree = "<group>"; };
 		32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		3245DF43256C2613003B8D8A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */,
 				3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */,
 				3245DF4F256C26CF003B8D8A /* UITableView + Extensions.swift */,
 				3245DF44256C2662003B8D8A /* AnyConfigurableCell.swift */,
@@ -385,6 +388,7 @@
 				3245DF12256C2350003B8D8A /* AppDelegate.swift in Sources */,
 				32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */,
 				3245DF5C256C2C25003B8D8A /* TeamsInteractor.swift in Sources */,
+				32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */,
 				3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */,
 				3245DF5A256C2C25003B8D8A /* TeamsRouter.swift in Sources */,
 				3245DF32256C2474003B8D8A /* CompetitionsRouter.swift in Sources */,

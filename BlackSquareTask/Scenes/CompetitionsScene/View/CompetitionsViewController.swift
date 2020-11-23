@@ -14,6 +14,7 @@ class CompetitionsViewController: UIViewController{
     var presenter: CompetitionsPresenter?
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.title = "Competitions"
         registerCell()
         presenter?.viewDidLoad()
     }
@@ -23,6 +24,23 @@ class CompetitionsViewController: UIViewController{
 }
 
 extension CompetitionsViewController: CompetitionsView {
+    func didFetchDataSuccessfully() {
+        competitionsTableView.reloadData()
+    }
+    
+    func didFailFetchData(with message: String) {
+        self.showAlert(title: "error", message: message) { (_) in
+        }
+    }
+    
+    func showIndicator() {
+        
+    }
+    
+    func dismissIndicator() {
+        
+    }
+    
     
 }
 

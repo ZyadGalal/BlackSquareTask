@@ -23,6 +23,23 @@ class TeamsViewController: UIViewController{
 }
 
 extension TeamsViewController: TeamsView {
+    func didFetchDataSuccessfully() {
+        teamsTableView.reloadData()
+    }
+    
+    func didFailFetchData(with message: String) {
+        self.showAlert(title: "error", message: message) { (_) in
+        }
+    }
+    
+    func showIndicator() {
+        
+    }
+    
+    func dismissIndicator() {
+        
+    }
+    
     
 }
 extension TeamsViewController: UITableViewDataSource {
