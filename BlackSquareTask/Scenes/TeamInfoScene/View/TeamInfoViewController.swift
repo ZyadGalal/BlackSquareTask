@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class TeamInfoViewController: UIViewController{
     
@@ -31,5 +31,9 @@ extension TeamInfoViewController: TeamInfoView {
         phoneLabel.text = phone
         addressLabel.text = address
         websiteTextView.text = website
+        if let logoURL = URL(string: logo) {
+            logoImageView.kf.indicatorType = .activity
+            logoImageView.kf.setImage(with: logoURL, options: [.processor(SVGImgProcessor())])
+        }
     }
 }

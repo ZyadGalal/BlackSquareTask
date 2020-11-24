@@ -21,6 +21,7 @@ class TeamsPresenter{
     var router: TeamsRouter
     var interactor: TeamsInteractor
     let competitionID: Int?
+    var teams: [Team] = []
     var modelItems : [CellConfigurator] = []
     typealias teamCellConfig = TableCellConfigurator<TeamsTableViewCell, Team>
     
@@ -31,19 +32,34 @@ class TeamsPresenter{
         self.competitionID = competitionID
     }
     func viewDidLoad(){
-        setFakeData()
+        guard let competitionID = competitionID else {
+            return
+        }
+        getTeams(with: competitionID)
     }
-    func setFakeData(){
-        let team = Team(id: 1, area: nil, name: "dc", shortName: "", tla: "", crestURL: "", address: "", phone: "", website: "", email: "", founded: 1, clubColors: "", venue: "", lastUpdated: nil)
-        let cellConfig = teamCellConfig(item: team)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
-        modelItems.append(cellConfig)
+    func getTeams(with competitionID: Int){
+        view?.showIndicator()
+        interactor.getTeams(with: competitionID) {[weak self] (result) in
+            guard let self = self else {return}
+            self.view?.dismissIndicator()
+            switch result {
+            case .success(let teamsResponse):
+                if let errorCode = teamsResponse.errorCode {
+                    self.view?.didFailFetchData(with: teamsResponse.message!)
+                }
+                else{
+                    guard let teams = teamsResponse.teams else {return}
+                    self.teams = teams
+                    for team in self.teams {
+                        let teamCell = teamCellConfig(item: team)
+                        self.modelItems.append(teamCell)
+                    }
+                    self.view?.didFetchDataSuccessfully()
+                }
+            case .failure(let error):
+                self.view?.didFailFetchData(with: error.localizedDescription)
+            }
+        }
     }
     func getTeamsCount() -> Int{
         return modelItems.count
@@ -52,9 +68,7 @@ class TeamsPresenter{
         return modelItems[index]
     }
     func didSelectTeam(at index: Int){
-        //change index with team id
-        let area = TeamArea(id: 1, name: "cairo")
-        let team = Team(id: 1, area: area, name: "Zyad FC", shortName: "", tla: "", crestURL: "", address: "6 october city - el khamayel city villa 68", phone: "01011226220", website: "Https://www.google.com", email: "zyad_mg@yahoo.com", founded: 1, clubColors: "", venue: "", lastUpdated: nil)
+        let team = teams[index]
         router.navigateToTeamInfoViewController(from: view!, with: team)
     }
 }

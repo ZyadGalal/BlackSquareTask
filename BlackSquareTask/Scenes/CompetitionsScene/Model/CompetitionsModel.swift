@@ -10,7 +10,6 @@ import Foundation
 // MARK: - CompetitionsModel
 struct CompetitionsModel: Codable {
     let count: Int?
-    let filters: Filters?
     let competitions: [Competition]?
 }
 
@@ -21,10 +20,10 @@ struct Competition: Codable {
     let name: String?
     let code: String?
     let emblemURL: String?
-    let plan: Plan?
+    let plan: String?
     let currentSeason: CurrentSeason?
     let numberOfAvailableSeasons: Int?
-    let lastUpdated: Date?
+    let lastUpdated: String?
 
     enum CodingKeys: String, CodingKey {
         case id, area, name, code
@@ -37,11 +36,9 @@ struct Competition: Codable {
 struct Area: Codable {
     let id: Int?
     let name, countryCode: String?
-    let ensignURL: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name, countryCode
-        case ensignURL = "ensignUrl"
     }
 }
 
@@ -66,13 +63,4 @@ struct Winner: Codable {
     }
 }
 
-enum Plan: String, Codable {
-    case tierFour = "TIER_FOUR"
-    case tierOne = "TIER_ONE"
-    case tierThree = "TIER_THREE"
-    case tierTwo = "TIER_TWO"
-}
 
-// MARK: - Filters
-struct Filters: Codable {
-}

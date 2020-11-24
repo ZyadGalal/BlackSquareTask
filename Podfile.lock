@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.2.0)
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - SVGKit (2.1.1):
+    - CocoaLumberjack (~> 3.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - SVGKit
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CocoaLumberjack
+    - Kingfisher
+    - SVGKit
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  SVGKit: 652cdf7bef8bec8564d04a8511d3ab50c7595fac
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 441d8f330902eb96ac713c42a70d42606502d24c
+
+COCOAPODS: 1.9.2

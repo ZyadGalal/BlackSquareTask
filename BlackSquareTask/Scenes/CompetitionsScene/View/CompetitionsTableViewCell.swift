@@ -28,9 +28,9 @@ class CompetitionsTableViewCell: UITableViewCell {
 
 extension CompetitionsTableViewCell: ConfigurableCell {
     func configure(model: Competition) {
-        competitionNameLabel.text = "Zyad Galal"
-        areaLabel.text = "Cairo"
-        startDateLabel.text = "2019-09-04"
-        endDateLabel.text = "2021-11-16"
+        competitionNameLabel.text = model.name ?? ""
+        areaLabel.text = model.area?.name ?? ""
+        startDateLabel.text = model.currentSeason?.startDate ?? ""
+        endDateLabel.text = model.currentSeason?.endDate ?? ""
     }
 }

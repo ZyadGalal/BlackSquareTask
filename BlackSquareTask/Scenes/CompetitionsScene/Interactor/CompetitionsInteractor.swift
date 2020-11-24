@@ -8,5 +8,7 @@
 import Foundation
 
 class CompetitionsInteractor {
-    
+    func getCompetitions(completionHandler : @escaping (Result<CompetitionsModel,Error>) -> ()){
+        NetworkClient.performRequest(_type: CompetitionsModel.self, router: .getCompetitions, completion: completionHandler)
+    }
 }

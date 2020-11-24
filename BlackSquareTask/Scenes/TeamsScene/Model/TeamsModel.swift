@@ -10,10 +10,11 @@ import Foundation
 // MARK: - TeamsModel
 struct TeamsModel: Codable {
     let count: Int?
-    let filters: Filters?
     let competition: TeamCompetition?
     let season: Season?
     let teams: [Team]?
+    let errorCode: Int?
+    let message: String?
 }
 
 // MARK: - Competition
@@ -21,7 +22,7 @@ struct TeamCompetition: Codable {
     let id: Int?
     let area: TeamArea?
     let name, code, plan: String?
-    let lastUpdated: Date?
+    let lastUpdated: String?
 }
 
 // MARK: - Area
@@ -50,7 +51,7 @@ struct Team: Codable {
     let founded: Int?
     let clubColors: String?
     let venue: String?
-    let lastUpdated: Date?
+    let lastUpdated: String?
 
     enum CodingKeys: String, CodingKey {
         case id, area, name, shortName, tla

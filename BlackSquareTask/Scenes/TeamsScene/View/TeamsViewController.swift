@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 class TeamsViewController: UIViewController{
     
@@ -33,11 +33,11 @@ extension TeamsViewController: TeamsView {
     }
     
     func showIndicator() {
-        
+        SVProgressHUD.show(withStatus: "Loading")
     }
     
     func dismissIndicator() {
-        
+        SVProgressHUD.dismiss()
     }
     
     

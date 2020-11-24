@@ -9,5 +9,5 @@ target 'BlackSquareTask' do
 pod 'Alamofire'
 pod 'SVProgressHUD'
 pod 'Kingfisher'
-
+pod 'SVGKit'
 end

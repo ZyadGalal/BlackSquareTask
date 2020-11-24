@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 class CompetitionsViewController: UIViewController{
     
@@ -34,11 +34,11 @@ extension CompetitionsViewController: CompetitionsView {
     }
     
     func showIndicator() {
-        
+        SVProgressHUD.show(withStatus: "Loading")
     }
     
     func dismissIndicator() {
-        
+        SVProgressHUD.dismiss()
     }
     
     

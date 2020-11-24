@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,15 +30,21 @@
 		3245DF6C256C2E9B003B8D8A /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */; };
 		3245DF6D256C2E9B003B8D8A /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */; };
 		3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */; };
+		326716B7256D3C0700868C10 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B4256D3C0700868C10 /* APIRouter.swift */; };
+		326716B8256D3C0700868C10 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B5256D3C0700868C10 /* NetworkClient.swift */; };
+		326716B9256D3C0700868C10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B6256D3C0700868C10 /* Constants.swift */; };
+		326716C3256D6E8A00868C10 /* SVGProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716C2256D6E8A00868C10 /* SVGProcessor.swift */; };
 		32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */; };
 		32F68BAA256C348E00BCD952 /* TeamInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */; };
 		32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */; };
 		32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */; };
 		32F68BAD256C348E00BCD952 /* TeamInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA8256C348E00BCD952 /* TeamInfoInteractor.swift */; };
 		32F68BAE256C348E00BCD952 /* TeamInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA9256C348E00BCD952 /* TeamInfoModel.swift */; };
+		65C30C01BEF0FCDD465D4D77 /* Pods_BlackSquareTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB310480867938F8950C6771 /* Pods_BlackSquareTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A041093BA12BE34BE245DC /* Pods-BlackSquareTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackSquareTask.release.xcconfig"; path = "Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask.release.xcconfig"; sourceTree = "<group>"; };
 		3245DF0E256C2350003B8D8A /* BlackSquareTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackSquareTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3245DF11256C2350003B8D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3245DF18256C2350003B8D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,12 +70,18 @@
 		3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		326716B4256D3C0700868C10 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		326716B5256D3C0700868C10 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		326716B6256D3C0700868C10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		326716C2256D6E8A00868C10 /* SVGProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGProcessor.swift; sourceTree = "<group>"; };
 		32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoPresenter.swift; sourceTree = "<group>"; };
 		32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoRouter.swift; sourceTree = "<group>"; };
 		32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
 		32F68BA8256C348E00BCD952 /* TeamInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoInteractor.swift; sourceTree = "<group>"; };
 		32F68BA9256C348E00BCD952 /* TeamInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoModel.swift; sourceTree = "<group>"; };
+		BB310480867938F8950C6771 /* Pods_BlackSquareTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackSquareTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B59E006EAB91246E1BE50C /* Pods-BlackSquareTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackSquareTask.debug.xcconfig"; path = "Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +89,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C30C01BEF0FCDD465D4D77 /* Pods_BlackSquareTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF695C4EBC91A4B4848F246 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB310480867938F8950C6771 /* Pods_BlackSquareTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3245DF05256C2350003B8D8A = {
 			isa = PBXGroup;
 			children = (
 				3245DF10256C2350003B8D8A /* BlackSquareTask */,
 				3245DF0F256C2350003B8D8A /* Products */,
+				E097BE492ECAEBBBA0F982C1 /* Pods */,
+				2AF695C4EBC91A4B4848F246 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +125,7 @@
 		3245DF10256C2350003B8D8A /* BlackSquareTask */ = {
 			isa = PBXGroup;
 			children = (
+				326716B3256D3BB400868C10 /* NetworkLayer */,
 				3245DF52256C2C0D003B8D8A /* Scenes */,
 				3245DF43256C2613003B8D8A /* Helpers */,
 				3245DF11256C2350003B8D8A /* AppDelegate.swift */,
@@ -176,6 +200,7 @@
 				3245DF4F256C26CF003B8D8A /* UITableView + Extensions.swift */,
 				3245DF44256C2662003B8D8A /* AnyConfigurableCell.swift */,
 				3245DF45256C2662003B8D8A /* UIStoryboard + Extensions.swift */,
+				326716C2256D6E8A00868C10 /* SVGProcessor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -244,6 +269,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		326716B3256D3BB400868C10 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				326716B4256D3C0700868C10 /* APIRouter.swift */,
+				326716B6256D3C0700868C10 /* Constants.swift */,
+				326716B5256D3C0700868C10 /* NetworkClient.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		32F68BA4256C345800BCD952 /* TeamInfoScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +331,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E097BE492ECAEBBBA0F982C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2B59E006EAB91246E1BE50C /* Pods-BlackSquareTask.debug.xcconfig */,
+				14A041093BA12BE34BE245DC /* Pods-BlackSquareTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,9 +347,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3245DF25256C2350003B8D8A /* Build configuration list for PBXNativeTarget "BlackSquareTask" */;
 			buildPhases = (
+				352CF3696E78AFB742F4E3B5 /* [CP] Check Pods Manifest.lock */,
 				3245DF0A256C2350003B8D8A /* Sources */,
 				3245DF0B256C2350003B8D8A /* Frameworks */,
 				3245DF0C256C2350003B8D8A /* Resources */,
+				C198F76237436A33627F2D4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,12 +409,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		352CF3696E78AFB742F4E3B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackSquareTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C198F76237436A33627F2D4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3245DF0A256C2350003B8D8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3245DF35256C2474003B8D8A /* CompetitionsModel.swift in Sources */,
+				326716C3256D6E8A00868C10 /* SVGProcessor.swift in Sources */,
+				326716B7256D3C0700868C10 /* APIRouter.swift in Sources */,
 				3245DF1C256C2350003B8D8A /* BlackSquareTask.xcdatamodeld in Sources */,
 				3245DF33256C2474003B8D8A /* CompetitionsViewController.swift in Sources */,
 				32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */,
@@ -388,10 +478,12 @@
 				3245DF12256C2350003B8D8A /* AppDelegate.swift in Sources */,
 				32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */,
 				3245DF5C256C2C25003B8D8A /* TeamsInteractor.swift in Sources */,
+				326716B8256D3C0700868C10 /* NetworkClient.swift in Sources */,
 				32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */,
 				3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */,
 				3245DF5A256C2C25003B8D8A /* TeamsRouter.swift in Sources */,
 				3245DF32256C2474003B8D8A /* CompetitionsRouter.swift in Sources */,
+				326716B9256D3C0700868C10 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +627,7 @@
 		};
 		3245DF26256C2350003B8D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2B59E006EAB91246E1BE50C /* Pods-BlackSquareTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +647,7 @@
 		};
 		3245DF27256C2350003B8D8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A041093BA12BE34BE245DC /* Pods-BlackSquareTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

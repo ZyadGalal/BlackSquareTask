@@ -31,22 +31,28 @@ class CompetitionsPresenter{
     }
     
     func viewDidLoad(){
-        setFakeData()
+        getCompetitions()
     }
-    func setFakeData(){
-        let competition = Competition(id: 1, area: nil, name: "zzz", code: "cdc", emblemURL: "dcdcdc", plan: nil, currentSeason: nil, numberOfAvailableSeasons: 1, lastUpdated: nil)
-        let competitionCell = competitionCellConfig(item: competition)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
-        modelItems.append(competitionCell)
+    func getCompetitions(){
+        view?.showIndicator()
+        interactor.getCompetitions {[weak self] (result) in
+            guard let self = self else {return}
+            self.view?.dismissIndicator()
+            switch result {
+            case .success(let competitionsResponse):
+                guard let competitions = competitionsResponse.competitions else {return}
+                self.competitions = competitions
+                for competition in competitions {
+                    let competitionCell = competitionCellConfig(item: competition)
+                    self.modelItems.append(competitionCell)
+                }
+                self.view?.didFetchDataSuccessfully()
+            case .failure(let error):
+                self.view?.didFailFetchData(with: error.localizedDescription)
+            }
+        }
     }
+
     func getCompetition(at index: Int) -> CellConfigurator {
         return modelItems[index]
     }
