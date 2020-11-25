@@ -9,14 +9,12 @@ import UIKit
 
 class TeamInfoRouter {
     class func createTeamInfoViewController(for team: Team) -> UIViewController{
-        let createViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController() as TeamInfoViewController
+        let teamInfoView = TeamInfoViewController(nibName: "TeamInfo", bundle: nil)
+        let router = TeamInfoRouter()
+        let interactor = TeamInfoInteractor()
+        let presenter = TeamInfoPresenter(view: teamInfoView, router: router, interactor: interactor, team: team)
+        teamInfoView.presenter = presenter
         
-        if let createView = createViewController as? TeamInfoView{
-            let router = TeamInfoRouter()
-            let interactor = TeamInfoInteractor()
-            let presenter = TeamInfoPresenter(view: createView, router: router, interactor: interactor, team: team)
-            createView.presenter = presenter
-        }
-        return createViewController
+        return teamInfoView
     }
 }

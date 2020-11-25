@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3245DF12256C2350003B8D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF11256C2350003B8D8A /* AppDelegate.swift */; };
-		3245DF19256C2350003B8D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF17256C2350003B8D8A /* Main.storyboard */; };
-		3245DF1C256C2350003B8D8A /* BlackSquareTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF1A256C2350003B8D8A /* BlackSquareTask.xcdatamodeld */; };
 		3245DF1E256C2350003B8D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF1D256C2350003B8D8A /* Assets.xcassets */; };
-		3245DF21256C2350003B8D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF1F256C2350003B8D8A /* LaunchScreen.storyboard */; };
 		3245DF31256C2474003B8D8A /* CompetitionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF2C256C2474003B8D8A /* CompetitionsPresenter.swift */; };
 		3245DF32256C2474003B8D8A /* CompetitionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF2D256C2474003B8D8A /* CompetitionsRouter.swift */; };
 		3245DF33256C2474003B8D8A /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF2E256C2474003B8D8A /* CompetitionsViewController.swift */; };
@@ -30,6 +27,11 @@
 		3245DF6C256C2E9B003B8D8A /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */; };
 		3245DF6D256C2E9B003B8D8A /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */; };
 		3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */; };
+		324DC457256EE4CB00845378 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DC456256EE4CB00845378 /* NetworkError.swift */; };
+		324DC45B256EE4EE00845378 /* Competition.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324DC45A256EE4EE00845378 /* Competition.xib */; };
+		324DC45E256EE78600845378 /* Teams.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324DC45D256EE78600845378 /* Teams.xib */; };
+		324DC461256EE7F700845378 /* TeamInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324DC460256EE7F700845378 /* TeamInfo.xib */; };
+		324DC468256EEBEB00845378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324DC467256EEBEB00845378 /* LaunchScreen.storyboard */; };
 		326716B7256D3C0700868C10 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B4256D3C0700868C10 /* APIRouter.swift */; };
 		326716B8256D3C0700868C10 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B5256D3C0700868C10 /* NetworkClient.swift */; };
 		326716B9256D3C0700868C10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B6256D3C0700868C10 /* Constants.swift */; };
@@ -47,10 +49,7 @@
 		14A041093BA12BE34BE245DC /* Pods-BlackSquareTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackSquareTask.release.xcconfig"; path = "Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask.release.xcconfig"; sourceTree = "<group>"; };
 		3245DF0E256C2350003B8D8A /* BlackSquareTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackSquareTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3245DF11256C2350003B8D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3245DF18256C2350003B8D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3245DF1B256C2350003B8D8A /* BlackSquareTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackSquareTask.xcdatamodel; sourceTree = "<group>"; };
 		3245DF1D256C2350003B8D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3245DF20256C2350003B8D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3245DF22256C2350003B8D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3245DF2C256C2474003B8D8A /* CompetitionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsPresenter.swift; sourceTree = "<group>"; };
 		3245DF2D256C2474003B8D8A /* CompetitionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsRouter.swift; sourceTree = "<group>"; };
@@ -70,6 +69,11 @@
 		3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		3245DF6F256C2F1A003B8D8A /* UIView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		324DC456256EE4CB00845378 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		324DC45A256EE4EE00845378 /* Competition.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Competition.xib; sourceTree = "<group>"; };
+		324DC45D256EE78600845378 /* Teams.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Teams.xib; sourceTree = "<group>"; };
+		324DC460256EE7F700845378 /* TeamInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamInfo.xib; sourceTree = "<group>"; };
+		324DC467256EEBEB00845378 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326716B4256D3C0700868C10 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		326716B5256D3C0700868C10 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		326716B6256D3C0700868C10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		3245DF05256C2350003B8D8A = {
 			isa = PBXGroup;
 			children = (
+				324DC467256EEBEB00845378 /* LaunchScreen.storyboard */,
 				3245DF10256C2350003B8D8A /* BlackSquareTask */,
 				3245DF0F256C2350003B8D8A /* Products */,
 				E097BE492ECAEBBBA0F982C1 /* Pods */,
@@ -125,15 +130,13 @@
 		3245DF10256C2350003B8D8A /* BlackSquareTask */ = {
 			isa = PBXGroup;
 			children = (
+				324DC455256EE4B800845378 /* Enums */,
 				326716B3256D3BB400868C10 /* NetworkLayer */,
 				3245DF52256C2C0D003B8D8A /* Scenes */,
 				3245DF43256C2613003B8D8A /* Helpers */,
 				3245DF11256C2350003B8D8A /* AppDelegate.swift */,
-				3245DF17256C2350003B8D8A /* Main.storyboard */,
 				3245DF1D256C2350003B8D8A /* Assets.xcassets */,
-				3245DF1F256C2350003B8D8A /* LaunchScreen.storyboard */,
 				3245DF22256C2350003B8D8A /* Info.plist */,
-				3245DF1A256C2350003B8D8A /* BlackSquareTask.xcdatamodeld */,
 			);
 			path = BlackSquareTask;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				3245DF2E256C2474003B8D8A /* CompetitionsViewController.swift */,
 				3245DF49256C26AB003B8D8A /* CompetitionsTableViewCell.swift */,
 				3245DF4A256C26AB003B8D8A /* CompetitionsTableViewCell.xib */,
+				324DC45A256EE4EE00845378 /* Competition.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +253,7 @@
 				3245DF56256C2C25003B8D8A /* TeamsViewController.swift */,
 				3245DF6A256C2E9B003B8D8A /* TeamsTableViewCell.swift */,
 				3245DF6B256C2E9B003B8D8A /* TeamsTableViewCell.xib */,
+				324DC45D256EE78600845378 /* Teams.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +272,14 @@
 				3245DF58256C2C25003B8D8A /* TeamsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		324DC455256EE4B800845378 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				324DC456256EE4CB00845378 /* NetworkError.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		326716B3256D3BB400868C10 /* NetworkLayer */ = {
@@ -303,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */,
+				324DC460256EE7F700845378 /* TeamInfo.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,9 +413,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3245DF21256C2350003B8D8A /* LaunchScreen.storyboard in Resources */,
+				324DC461256EE7F700845378 /* TeamInfo.xib in Resources */,
+				324DC45B256EE4EE00845378 /* Competition.xib in Resources */,
 				3245DF1E256C2350003B8D8A /* Assets.xcassets in Resources */,
-				3245DF19256C2350003B8D8A /* Main.storyboard in Resources */,
+				324DC45E256EE78600845378 /* Teams.xib in Resources */,
+				324DC468256EEBEB00845378 /* LaunchScreen.storyboard in Resources */,
 				3245DF6D256C2E9B003B8D8A /* TeamsTableViewCell.xib in Resources */,
 				3245DF4C256C26AB003B8D8A /* CompetitionsTableViewCell.xib in Resources */,
 			);
@@ -457,9 +473,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3245DF35256C2474003B8D8A /* CompetitionsModel.swift in Sources */,
+				324DC457256EE4CB00845378 /* NetworkError.swift in Sources */,
 				326716C3256D6E8A00868C10 /* SVGProcessor.swift in Sources */,
 				326716B7256D3C0700868C10 /* APIRouter.swift in Sources */,
-				3245DF1C256C2350003B8D8A /* BlackSquareTask.xcdatamodeld in Sources */,
 				3245DF33256C2474003B8D8A /* CompetitionsViewController.swift in Sources */,
 				32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */,
 				3245DF50256C26CF003B8D8A /* UITableView + Extensions.swift in Sources */,
@@ -488,25 +504,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3245DF17256C2350003B8D8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3245DF18256C2350003B8D8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3245DF1F256C2350003B8D8A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3245DF20256C2350003B8D8A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3245DF23256C2350003B8D8A /* Debug */ = {
@@ -687,19 +684,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3245DF1A256C2350003B8D8A /* BlackSquareTask.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3245DF1B256C2350003B8D8A /* BlackSquareTask.xcdatamodel */,
-			);
-			currentVersion = 3245DF1B256C2350003B8D8A /* BlackSquareTask.xcdatamodel */;
-			path = BlackSquareTask.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3245DF06256C2350003B8D8A /* Project object */;
 }

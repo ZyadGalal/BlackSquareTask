@@ -41,14 +41,13 @@ class CompetitionsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let competitionsResponse):
-            let competitions = competitionsResponse.competitions
-                for competition in competitions {
+                for competition in competitionsResponse {
                     self.competitions.append(competition)
                     let competitionCell = competitionCellConfig(item: competition)
                     self.modelItems.append(competitionCell)
                 }
 
-                self.view?.didFetchDataSuccessfully()
+            self.view?.didFetchDataSuccessfully()
             case .failure(let error):
                 self.view?.didFailFetchData(with: error.localizedDescription)
             }

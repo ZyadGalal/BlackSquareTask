@@ -14,6 +14,7 @@ class TeamsViewController: UIViewController{
     var presenter: TeamsPresenter?
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.title = "Teams"
         registerCell()
         presenter?.viewDidLoad()
     }
@@ -28,8 +29,7 @@ extension TeamsViewController: TeamsView {
     }
     
     func didFailFetchData(with message: String) {
-        self.showAlert(title: "error", message: message) { (_) in
-        }
+        self.showAlert(title: "error", message: message) { (_) in }
     }
     
     func showIndicator() {
@@ -39,8 +39,6 @@ extension TeamsViewController: TeamsView {
     func dismissIndicator() {
         SVProgressHUD.dismiss()
     }
-    
-    
 }
 extension TeamsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

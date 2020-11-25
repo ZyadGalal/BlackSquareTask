@@ -29,8 +29,7 @@ extension CompetitionsViewController: CompetitionsView {
     }
     
     func didFailFetchData(with message: String) {
-        self.showAlert(title: "error", message: message) { (_) in
-        }
+        self.showAlert(title: "error", message: message) { _ in }
     }
     
     func showIndicator() {

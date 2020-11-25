@@ -20,6 +20,7 @@ class TeamInfoViewController: UIViewController{
     var presenter: TeamInfoPresenter?
     override func viewDidLoad(){
         super.viewDidLoad()
+        self.title = "Team Information"
         presenter?.viewDidLoad()
     }
 }

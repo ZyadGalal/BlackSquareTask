@@ -32,9 +32,7 @@ class TeamsPresenter{
         self.competitionID = competitionID
     }
     func viewDidLoad(){
-        guard let competitionID = competitionID else {
-            return
-        }
+        guard let competitionID = competitionID else { return }
         getTeams(with: competitionID)
     }
     func getTeams(with competitionID: Int){
@@ -44,16 +42,19 @@ class TeamsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let teamsResponse):
+                //check if there are any errors with response
                 if teamsResponse.message != "" {
                     self.view?.didFailFetchData(with: teamsResponse.message)
                 }
                 else{
                     let teams = teamsResponse.teams
+                    //config model items to prepare for viewing
                     for team in teams {
                         self.teams.append(team)
                         let teamCell = teamCellConfig(item: team)
                         self.modelItems.append(teamCell)
                     }
+                    //notify view for reloading table view data
                     self.view?.didFetchDataSuccessfully()
                 }
             case .failure(let error):
@@ -61,6 +62,7 @@ class TeamsPresenter{
             }
         }
     }
+    
     func getTeamsCount() -> Int{
         return modelItems.count
     }

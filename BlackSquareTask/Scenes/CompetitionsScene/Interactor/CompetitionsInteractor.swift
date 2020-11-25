@@ -7,52 +7,39 @@
 
 import Foundation
 import RealmSwift
-//
 
 
 class CompetitionsInteractor {
-    func getCompetitions(completionHandler : @escaping (Result<CompetitionsModel,Error>) -> ()){
+    func getCompetitions(completionHandler : @escaping(Result<List<Competition>,Error>) -> ()){
         NetworkClient.performRequest(_type: CompetitionsModel.self, router: .getCompetitions) { (result) in
             switch result {
             case .success(let competitionResponse):
-                let realm = try! Realm()
                 print(Realm.Configuration.defaultConfiguration.fileURL!)
+                let realm = try! Realm()
                 try! realm.write {
                     realm.add(competitionResponse, update: .all)
                 }
-                completionHandler(result)
+                completionHandler(.success(competitionResponse.competitions))
             case .failure(let error):
+                //MARK: -check if no internet connection to try to fetch data from local database
                 if let error = error.asAFError?.underlyingError as? URLError , error.code == .notConnectedToInternet{
                     self.getFromRealm(completionHandler: completionHandler)
                 }
                 else{
-                    completionHandler(result)
+                    completionHandler(.failure(error))
                 }
             }
             
         }
     }
-    
-    func getFromRealm(completionHandler : @escaping (Result<CompetitionsModel,Error>) -> ()){
+    //MARK: -check if local database have the data needed
+    func getFromRealm(completionHandler : @escaping (Result<List<Competition>,Error>) -> ()){
         let realm = try! Realm()
-        
         if let competitions = realm.objects(CompetitionsModel.self).first {
-            return completionHandler(.success(competitions))
+            return completionHandler(.success(competitions.competitions))
         }
         else{
             return completionHandler(.failure(NetworkError.NoInternetConnection))
         }
     }
 }
-
-enum NetworkError: Error, LocalizedError {
-    case NoInternetConnection
-    
-    public var errorDescription: String? {
-        switch self {
-        case .NoInternetConnection:
-            return "No Internet Connection"
-        }
-    }
-}
-
