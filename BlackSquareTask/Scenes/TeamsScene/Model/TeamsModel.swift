@@ -6,43 +6,64 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - TeamsModel
-struct TeamsModel: Codable {
-    let count: Int?
-    let competition: TeamCompetition?
-    let teams: [Team]?
-    let errorCode: Int?
-    let message: String?
+class TeamsModel: Object, Codable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var count: Int = 0
+    @objc dynamic var competition: TeamCompetition?
+    var teams = List<Team>()
+    var message: String = ""
+    enum CodingKeys: String, CodingKey {
+        case id, count,competition,teams,message
+    }
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.count = try container.decodeIfPresent(Int.self, forKey: .count) ?? 0
+        let teamsList = try container.decodeIfPresent([Team].self, forKey: .teams) ?? []
+        self.teams.append(objectsIn: teamsList)
+        self.competition = try container.decodeIfPresent(TeamCompetition.self, forKey: .competition) ?? nil
+        self.message = try container.decodeIfPresent(String.self, forKey: .message) ?? ""
+
+    }
 }
 
 // MARK: - Competition
-struct TeamCompetition: Codable {
-    let id: Int?
-    let area: TeamArea?
-    let name: String?
-}
-
-// MARK: - Area
-struct TeamArea: Codable {
-    let id: Int?
-    let name: String?
+class TeamCompetition: Object, Codable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var area: Area?
+    @objc dynamic var name: String?
+    enum CodingKeys: String, CodingKey {
+        case id, name,area
+    }
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 // MARK: - Team
-struct Team: Codable {
-    let id: Int?
-    let area: TeamArea?
-    let name, shortName: String?
-    let crestURL: String?
-    let address, phone: String?
-    let website: String?
-    let email: String?
+class Team: Object, Codable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var area: Area?
+    @objc dynamic var name, shortName: String?
+    @objc dynamic var crestURL: String?
+    @objc dynamic var address, phone: String?
+    @objc dynamic var website: String?
+    @objc dynamic var email: String?
 
     enum CodingKeys: String, CodingKey {
         case id, area, name, shortName
         case crestURL = "crestUrl"
         case address, phone, website, email
+    }
+    override class func primaryKey() -> String? {
+        return "id"
     }
 }
 

@@ -44,13 +44,13 @@ class TeamsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let teamsResponse):
-                if let _ = teamsResponse.errorCode {
-                    self.view?.didFailFetchData(with: teamsResponse.message!)
+                if teamsResponse.message != "" {
+                    self.view?.didFailFetchData(with: teamsResponse.message)
                 }
                 else{
-                    guard let teams = teamsResponse.teams else {return}
-                    self.teams = teams
-                    for team in self.teams {
+                    let teams = teamsResponse.teams
+                    for team in teams {
+                        self.teams.append(team)
                         let teamCell = teamCellConfig(item: team)
                         self.modelItems.append(teamCell)
                     }
