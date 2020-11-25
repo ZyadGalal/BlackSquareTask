@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol CompetitionsView: class{
     var presenter: CompetitionsPresenter? {get set}
@@ -40,12 +41,13 @@ class CompetitionsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let competitionsResponse):
-                guard let competitions = competitionsResponse.competitions else {return}
-                self.competitions = competitions
+            let competitions = competitionsResponse.competitions
                 for competition in competitions {
+                    self.competitions.append(competition)
                     let competitionCell = competitionCellConfig(item: competition)
                     self.modelItems.append(competitionCell)
                 }
+
                 self.view?.didFetchDataSuccessfully()
             case .failure(let error):
                 self.view?.didFailFetchData(with: error.localizedDescription)
@@ -57,10 +59,11 @@ class CompetitionsPresenter{
         return modelItems[index]
     }
     func getCompetitionsCount() -> Int{
+        print("model items \(modelItems.count)")
         return modelItems.count
     }
     func didSelectCompetition(at index: Int){
-        guard let competitionID = competitions[index].id else {return}
+        let competitionID = competitions[index].id
         router.navigateToTeamViewController(from: view!, with: competitionID)
     }
 }

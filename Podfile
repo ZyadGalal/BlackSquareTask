@@ -10,4 +10,5 @@ pod 'Alamofire'
 pod 'SVProgressHUD'
 pod 'Kingfisher'
 pod 'SVGKit'
+pod 'RealmSwift'
 end

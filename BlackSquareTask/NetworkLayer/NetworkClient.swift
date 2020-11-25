@@ -14,7 +14,6 @@ class NetworkClient{
     
     static func performRequest<T> (_type:T.Type ,router : APIRouter , completion : @escaping (Swift.Result<T,Error>) -> ()) where T : Decodable{
         AF.request(router).responseJSON { (response) in
-            print(response.data!)
 
             switch response.result{
             case .success(_) :

@@ -44,7 +44,7 @@ class TeamsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let teamsResponse):
-                if let errorCode = teamsResponse.errorCode {
+                if let _ = teamsResponse.errorCode {
                     self.view?.didFailFetchData(with: teamsResponse.message!)
                 }
                 else{
