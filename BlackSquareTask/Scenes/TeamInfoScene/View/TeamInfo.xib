@@ -28,17 +28,17 @@
                     <rect key="frame" x="5" y="49" width="404" height="842"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-a3-4nG">
-                            <rect key="frame" x="0.0" y="0.0" width="404" height="429"/>
+                            <rect key="frame" x="0.0" y="0.0" width="404" height="633"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-78-5d2">
-                                    <rect key="frame" x="0.0" y="0.0" width="404" height="200"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZq-78-5d2">
+                                    <rect key="frame" x="0.0" y="0.0" width="404" height="404"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="200" id="PnG-Lg-RIa"/>
+                                        <constraint firstAttribute="width" secondItem="sZq-78-5d2" secondAttribute="height" multiplier="1:1" id="xa3-6D-bIZ"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="l4x-Du-kO6">
-                                    <rect key="frame" x="16" y="216" width="372" height="205"/>
+                                    <rect key="frame" x="16" y="420" width="372" height="205"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6kB-Zu-7ju">
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="21.5"/>

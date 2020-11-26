@@ -1,35 +1,31 @@
 //
-//  CompetitionsViewController.swift
+//  AvailableCompetitionsViewController.swift
 //  BlackSquareTask
 //
-//  Created by Zyad Galal on 23/11/2020.
+//  Created by Zyad Galal on 26/11/2020.
 //
 
 import UIKit
 import SVProgressHUD
 
-class CompetitionsViewController: UIViewController{
+class AvailableCompetitionsViewController: UIViewController{
     
-    @IBOutlet weak var competitionsTableView: UITableView!
-    var presenter: CompetitionsPresenter?
+    @IBOutlet weak var availableCompetitionsTableView: UITableView!
+    var presenter: AvailableCompetitionsPresenter?
     override func viewDidLoad(){
         super.viewDidLoad()
-        self.title = "Competitions"
+        self.title = "Available"
         registerCell()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Available", style: .plain, target: self, action: #selector(availableCompetitionsTapped))
         presenter?.viewDidLoad()
     }
-    @objc func availableCompetitionsTapped(){
-        presenter?.navigateToAvailableCompetitions()
-    }
     func registerCell(){
-        competitionsTableView.register(CompetitionsTableViewCell.self)
+        availableCompetitionsTableView.register(CompetitionsTableViewCell.self)
     }
 }
 
-extension CompetitionsViewController: CompetitionsView {
+extension AvailableCompetitionsViewController: AvailableCompetitionsView {
     func didFetchDataSuccessfully() {
-        competitionsTableView.reloadData()
+        availableCompetitionsTableView.reloadData()
     }
     
     func didFailFetchData(with message: String) {
@@ -43,11 +39,9 @@ extension CompetitionsViewController: CompetitionsView {
     func dismissIndicator() {
         SVProgressHUD.dismiss()
     }
-    
-    
 }
 
-extension CompetitionsViewController: UITableViewDataSource {
+extension AvailableCompetitionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getCompetitionsCount() ?? 0
     }
@@ -58,4 +52,8 @@ extension CompetitionsViewController: UITableViewDataSource {
         return cell!
     }
 }
-
+extension AvailableCompetitionsViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectCompetition(at: indexPath.row)
+    }
+}

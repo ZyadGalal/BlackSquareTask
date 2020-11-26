@@ -17,8 +17,8 @@ class CompetitionsRouter {
         
         return competitionView
     }
-    func navigateToTeamViewController(from view: CompetitionsView, with competitionID: Int){
-        let teamsViewController = TeamsRouter.createTeamsViewController(for: competitionID)
+    func navigateToAvailableCompetitionViewController(from view: CompetitionsView){
+        let teamsViewController = AvailableCompetitionsRouter.createAvailableCompetitionsViewController()
         if let viewController = view as? UIViewController {
             viewController.navigationController?.pushViewController(teamsViewController, animated: true)
         }

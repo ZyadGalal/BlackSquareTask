@@ -36,6 +36,11 @@
 		326716B8256D3C0700868C10 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B5256D3C0700868C10 /* NetworkClient.swift */; };
 		326716B9256D3C0700868C10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716B6256D3C0700868C10 /* Constants.swift */; };
 		326716C3256D6E8A00868C10 /* SVGProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326716C2256D6E8A00868C10 /* SVGProcessor.swift */; };
+		329425EC256FEF5200EA2F9C /* AvailableCompetitionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329425E7256FEF5200EA2F9C /* AvailableCompetitionsPresenter.swift */; };
+		329425ED256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329425E8256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift */; };
+		329425EE256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329425E9256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift */; };
+		329425EF256FEF5200EA2F9C /* AvailableCompetitionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329425EA256FEF5200EA2F9C /* AvailableCompetitionsInteractor.swift */; };
+		329425F9256FEF9600EA2F9C /* AvailableCompetitions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329425F8256FEF9600EA2F9C /* AvailableCompetitions.xib */; };
 		32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */; };
 		32F68BAA256C348E00BCD952 /* TeamInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */; };
 		32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */; };
@@ -78,6 +83,11 @@
 		326716B5256D3C0700868C10 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		326716B6256D3C0700868C10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		326716C2256D6E8A00868C10 /* SVGProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGProcessor.swift; sourceTree = "<group>"; };
+		329425E7256FEF5200EA2F9C /* AvailableCompetitionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCompetitionsPresenter.swift; sourceTree = "<group>"; };
+		329425E8256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCompetitionsRouter.swift; sourceTree = "<group>"; };
+		329425E9256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCompetitionsViewController.swift; sourceTree = "<group>"; };
+		329425EA256FEF5200EA2F9C /* AvailableCompetitionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCompetitionsInteractor.swift; sourceTree = "<group>"; };
+		329425F8256FEF9600EA2F9C /* AvailableCompetitions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableCompetitions.xib; sourceTree = "<group>"; };
 		32B0EF59256C484E0085A980 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoPresenter.swift; sourceTree = "<group>"; };
 		32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoRouter.swift; sourceTree = "<group>"; };
@@ -214,6 +224,7 @@
 			children = (
 				32F68BA4256C345800BCD952 /* TeamInfoScene */,
 				3245DF53256C2C18003B8D8A /* TeamsScene */,
+				329425E6256FEF2E00EA2F9C /* AvailableCompetitionsScene */,
 				3245DF2B256C244A003B8D8A /* CompetitionsScene */,
 			);
 			path = Scenes;
@@ -290,6 +301,50 @@
 				326716B5256D3C0700868C10 /* NetworkClient.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		329425E6256FEF2E00EA2F9C /* AvailableCompetitionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				329425F6256FEF7500EA2F9C /* Interactor */,
+				329425F5256FEF6C00EA2F9C /* Router */,
+				329425F4256FEF6000EA2F9C /* View */,
+				329425F3256FEF5500EA2F9C /* Presenter */,
+			);
+			path = AvailableCompetitionsScene;
+			sourceTree = "<group>";
+		};
+		329425F3256FEF5500EA2F9C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				329425E7256FEF5200EA2F9C /* AvailableCompetitionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		329425F4256FEF6000EA2F9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				329425E9256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift */,
+				329425F8256FEF9600EA2F9C /* AvailableCompetitions.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		329425F5256FEF6C00EA2F9C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				329425E8256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		329425F6256FEF7500EA2F9C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				329425EA256FEF5200EA2F9C /* AvailableCompetitionsInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		32F68BA4256C345800BCD952 /* TeamInfoScene */ = {
@@ -414,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				324DC461256EE7F700845378 /* TeamInfo.xib in Resources */,
+				329425F9256FEF9600EA2F9C /* AvailableCompetitions.xib in Resources */,
 				324DC45B256EE4EE00845378 /* Competition.xib in Resources */,
 				3245DF1E256C2350003B8D8A /* Assets.xcassets in Resources */,
 				324DC45E256EE78600845378 /* Teams.xib in Resources */,
@@ -476,14 +532,17 @@
 				324DC457256EE4CB00845378 /* NetworkError.swift in Sources */,
 				326716C3256D6E8A00868C10 /* SVGProcessor.swift in Sources */,
 				326716B7256D3C0700868C10 /* APIRouter.swift in Sources */,
+				329425EC256FEF5200EA2F9C /* AvailableCompetitionsPresenter.swift in Sources */,
 				3245DF33256C2474003B8D8A /* CompetitionsViewController.swift in Sources */,
 				32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */,
 				3245DF50256C26CF003B8D8A /* UITableView + Extensions.swift in Sources */,
+				329425ED256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift in Sources */,
 				3245DF47256C2662003B8D8A /* UIStoryboard + Extensions.swift in Sources */,
 				32F68BAE256C348E00BCD952 /* TeamInfoModel.swift in Sources */,
 				3245DF5B256C2C25003B8D8A /* TeamsViewController.swift in Sources */,
 				3245DF5D256C2C25003B8D8A /* TeamsModel.swift in Sources */,
 				3245DF31256C2474003B8D8A /* CompetitionsPresenter.swift in Sources */,
+				329425EE256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift in Sources */,
 				32F68BAD256C348E00BCD952 /* TeamInfoInteractor.swift in Sources */,
 				3245DF6C256C2E9B003B8D8A /* TeamsTableViewCell.swift in Sources */,
 				3245DF34256C2474003B8D8A /* CompetitionsInteractor.swift in Sources */,
@@ -495,6 +554,7 @@
 				32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */,
 				3245DF5C256C2C25003B8D8A /* TeamsInteractor.swift in Sources */,
 				326716B8256D3C0700868C10 /* NetworkClient.swift in Sources */,
+				329425EF256FEF5200EA2F9C /* AvailableCompetitionsInteractor.swift in Sources */,
 				32B0EF5A256C484E0085A980 /* UIViewControllerExtension.swift in Sources */,
 				3245DF70256C2F1A003B8D8A /* UIView+Extentions.swift in Sources */,
 				3245DF5A256C2C25003B8D8A /* TeamsRouter.swift in Sources */,

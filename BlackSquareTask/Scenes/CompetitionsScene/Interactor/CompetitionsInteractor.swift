@@ -29,7 +29,6 @@ class CompetitionsInteractor {
                     completionHandler(.failure(error))
                 }
             }
-            
         }
     }
     //MARK: -check if local database have the data needed
