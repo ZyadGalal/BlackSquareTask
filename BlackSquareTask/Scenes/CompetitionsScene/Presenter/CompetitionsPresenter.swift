@@ -22,7 +22,6 @@ class CompetitionsPresenter{
     var router: CompetitionsRouter
     var interactor: CompetitionsInteractor
     var modelItems : [CellConfigurator] = []
-    var competitions: [Competition] = []
     typealias competitionCellConfig = TableCellConfigurator<CompetitionsTableViewCell, Competition>
 
     init (view: CompetitionsView, router: CompetitionsRouter, interactor: CompetitionsInteractor){
@@ -41,13 +40,8 @@ class CompetitionsPresenter{
             self.view?.dismissIndicator()
             switch result {
             case .success(let competitionsResponse):
-                for competition in competitionsResponse {
-                    self.competitions.append(competition)
-                    let competitionCell = competitionCellConfig(item: competition)
-                    self.modelItems.append(competitionCell)
-                }
-
-            self.view?.didFetchDataSuccessfully()
+                self.modelItems = competitionsResponse.map({return competitionCellConfig(item: $0)})
+                self.view?.didFetchDataSuccessfully()
             case .failure(let error):
                 self.view?.didFailFetchData(with: error.localizedDescription)
             }
@@ -58,7 +52,6 @@ class CompetitionsPresenter{
         return modelItems[index]
     }
     func getCompetitionsCount() -> Int{
-        print("model items \(modelItems.count)")
         return modelItems.count
     }
     func navigateToAvailableCompetitions(){

@@ -9,8 +9,6 @@ import UIKit
 
 class AvailableCompetitionsRouter {
     class func createAvailableCompetitionsViewController() -> UIViewController{
-        
-        
         let AvailableCompetitionsView = AvailableCompetitionsViewController(nibName: "AvailableCompetitions", bundle: nil)
         let router = AvailableCompetitionsRouter()
         let interactor = AvailableCompetitionsInteractor()

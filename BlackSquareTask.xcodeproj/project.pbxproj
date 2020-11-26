@@ -45,8 +45,6 @@
 		32F68BAA256C348E00BCD952 /* TeamInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */; };
 		32F68BAB256C348E00BCD952 /* TeamInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */; };
 		32F68BAC256C348E00BCD952 /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */; };
-		32F68BAD256C348E00BCD952 /* TeamInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA8256C348E00BCD952 /* TeamInfoInteractor.swift */; };
-		32F68BAE256C348E00BCD952 /* TeamInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F68BA9256C348E00BCD952 /* TeamInfoModel.swift */; };
 		65C30C01BEF0FCDD465D4D77 /* Pods_BlackSquareTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB310480867938F8950C6771 /* Pods_BlackSquareTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,8 +90,6 @@
 		32F68BA5256C348E00BCD952 /* TeamInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoPresenter.swift; sourceTree = "<group>"; };
 		32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoRouter.swift; sourceTree = "<group>"; };
 		32F68BA7256C348E00BCD952 /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
-		32F68BA8256C348E00BCD952 /* TeamInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoInteractor.swift; sourceTree = "<group>"; };
-		32F68BA9256C348E00BCD952 /* TeamInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoModel.swift; sourceTree = "<group>"; };
 		BB310480867938F8950C6771 /* Pods_BlackSquareTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackSquareTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B59E006EAB91246E1BE50C /* Pods-BlackSquareTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackSquareTask.debug.xcconfig"; path = "Target Support Files/Pods-BlackSquareTask/Pods-BlackSquareTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,8 +346,6 @@
 		32F68BA4256C345800BCD952 /* TeamInfoScene */ = {
 			isa = PBXGroup;
 			children = (
-				32F68BB4256C34B600BCD952 /* Model */,
-				32F68BB3256C34AC00BCD952 /* Interactor */,
 				32F68BB2256C34A400BCD952 /* Router */,
 				32F68BB1256C349C00BCD952 /* View */,
 				32F68BB0256C349200BCD952 /* Presneter */,
@@ -382,22 +376,6 @@
 				32F68BA6256C348E00BCD952 /* TeamInfoRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		32F68BB3256C34AC00BCD952 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				32F68BA8256C348E00BCD952 /* TeamInfoInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		32F68BB4256C34B600BCD952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				32F68BA9256C348E00BCD952 /* TeamInfoModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E097BE492ECAEBBBA0F982C1 /* Pods */ = {
@@ -538,12 +516,10 @@
 				3245DF50256C26CF003B8D8A /* UITableView + Extensions.swift in Sources */,
 				329425ED256FEF5200EA2F9C /* AvailableCompetitionsRouter.swift in Sources */,
 				3245DF47256C2662003B8D8A /* UIStoryboard + Extensions.swift in Sources */,
-				32F68BAE256C348E00BCD952 /* TeamInfoModel.swift in Sources */,
 				3245DF5B256C2C25003B8D8A /* TeamsViewController.swift in Sources */,
 				3245DF5D256C2C25003B8D8A /* TeamsModel.swift in Sources */,
 				3245DF31256C2474003B8D8A /* CompetitionsPresenter.swift in Sources */,
 				329425EE256FEF5200EA2F9C /* AvailableCompetitionsViewController.swift in Sources */,
-				32F68BAD256C348E00BCD952 /* TeamInfoInteractor.swift in Sources */,
 				3245DF6C256C2E9B003B8D8A /* TeamsTableViewCell.swift in Sources */,
 				3245DF34256C2474003B8D8A /* CompetitionsInteractor.swift in Sources */,
 				3245DF46256C2662003B8D8A /* AnyConfigurableCell.swift in Sources */,

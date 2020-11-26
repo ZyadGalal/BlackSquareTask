@@ -16,12 +16,10 @@ class TeamInfoPresenter{
     
     weak var view: TeamInfoView?
     var router: TeamInfoRouter
-    var interactor: TeamInfoInteractor
     let team: Team
-    init (view: TeamInfoView, router: TeamInfoRouter, interactor: TeamInfoInteractor, team: Team){
+    init (view: TeamInfoView, router: TeamInfoRouter, team: Team){
         self.view = view
         self.router = router
-        self.interactor = interactor
         self.team = team
     }
     func viewDidLoad(){

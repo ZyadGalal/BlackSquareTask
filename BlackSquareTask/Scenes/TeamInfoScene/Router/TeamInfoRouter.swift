@@ -11,8 +11,7 @@ class TeamInfoRouter {
     class func createTeamInfoViewController(for team: Team) -> UIViewController{
         let teamInfoView = TeamInfoViewController(nibName: "TeamInfo", bundle: nil)
         let router = TeamInfoRouter()
-        let interactor = TeamInfoInteractor()
-        let presenter = TeamInfoPresenter(view: teamInfoView, router: router, interactor: interactor, team: team)
+        let presenter = TeamInfoPresenter(view: teamInfoView, router: router, team: team)
         teamInfoView.presenter = presenter
         
         return teamInfoView

@@ -49,11 +49,8 @@ class TeamsPresenter{
                 else{
                     let teams = teamsResponse.teams
                     //config model items to prepare for viewing
-                    for team in teams {
-                        self.teams.append(team)
-                        let teamCell = teamCellConfig(item: team)
-                        self.modelItems.append(teamCell)
-                    }
+                    self.teams.append(contentsOf: teams)
+                    self.modelItems = teams.map({teamCellConfig(item: $0)})
                     //notify view for reloading table view data
                     self.view?.didFetchDataSuccessfully()
                 }
